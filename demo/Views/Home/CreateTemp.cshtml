@@ -1,0 +1,29 @@
+﻿@model Student
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>CreateTemp</h1>
+
+<form asp-action="create" method="post">
+    <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" class="form-control" asp-for="Username" id="username">
+    </div>
+    <div class="form-group">
+        <label for="password">Passowrd:</label>
+        <input type="password" class="form-control" asp-for="Password" id="password">
+    </div>
+    <div class="form-group">
+        <label for="Name">Name:</label>
+        <input type="text" class="form-control" asp-for="StudentProfile.Name" id="Name">
+    </div>
+    <div class="form-group">
+        <label for="surname">Surname:</label>
+        <input type="text" class="form-control" asp-for="StudentProfile.Surname" id="surname">
+    </div>
+
+
+    <button type="submit" class="btn btn-default">Create</button>
+</form>
+

@@ -1,0 +1,17 @@
+﻿@model PersonViewModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+<form asp-action="create" method="post">
+    <div class="form-group">
+        <label for="name">Username:</label>
+        <input type="text" class="form-control" asp-for="Name" id="name">
+    </div>
+    <div class="form-group">
+        <label asp-for="SelectedHobbies"></label>
+        <select asp-for="SelectedHobbies" asp-items="Model.HobbieList"></select>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>

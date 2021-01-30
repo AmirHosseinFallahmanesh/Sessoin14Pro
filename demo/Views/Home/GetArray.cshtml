@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewData["Title"] = "GetArray";
+}
+
+<h1>GetArray</h1>
+<form asp-action="getArray" method="post">
+    @for (int i = 0; i < 3; i++)
+    {
+
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" name="[@i].username" id="username">
+        </div>
+        <div class="form-group">
+            <label for="password">Passowrd:</label>
+            <input type="password" class="form-control" name="[@i].password" id="password">
+        </div>
+  
+
+    }
+
+
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
